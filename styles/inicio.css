@@ -1,0 +1,640 @@
+   .view {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: -462px;
+    perspective: 400;
+  }
+
+  .plane {
+    width: 120px;
+    height: 120px;
+    transform-style: preserve-3d;
+  }
+  .plane.main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform: rotateX(60deg) rotateZ(-30deg);
+    -webkit-animation: rotate 20s infinite linear;
+            animation: rotate 20s infinite linear;
+  }
+  .plane.main .circle {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    transform-style: preserve-3d;
+    border-radius: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 0 60px crimson, inset 0 0 60px crimson;
+  }
+  .plane.main .circle::before, .plane.main .circle::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 10%;
+    height: 10%;
+    border-radius: 100%;
+    background: crimson;
+    box-sizing: border-box;
+    box-shadow: 0 0 60px 2px crimson;
+  }
+  .plane.main .circle::before {
+    transform: translateZ(-90px);
+  }
+  .plane.main .circle::after {
+    transform: translateZ(90px);
+  }
+  .plane.main .circle:nth-child(1) {
+    transform: rotateZ(72deg) rotateX(63.435deg);
+  }
+  .plane.main .circle:nth-child(2) {
+    transform: rotateZ(144deg) rotateX(63.435deg);
+  }
+  .plane.main .circle:nth-child(3) {
+    transform: rotateZ(216deg) rotateX(63.435deg);
+  }
+  .plane.main .circle:nth-child(4) {
+    transform: rotateZ(288deg) rotateX(63.435deg);
+  }
+  .plane.main .circle:nth-child(5) {
+    transform: rotateZ(360deg) rotateX(63.435deg);
+  }
+  
+  @-webkit-keyframes rotate {
+    0% {
+      transform: rotateX(0) rotateY(0) rotateZ(0);
+      margin-top: 50px;
+    }
+    100% {
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+      margin-top: 150px;
+    }
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotateX(0) rotateY(0) rotateZ(0);
+    }
+    100% {
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+  }
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none
+}
+
+a{
+  color: white;
+}
+
+a:visited{
+  color: white;
+}
+
+.clear-fix{
+    float: none;
+    clear: both;
+}
+
+body{
+    background: url('../img/bmw.jpeg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#global{
+    width: 65%;
+    margin: 0px auto;
+    margin-top: 30px;
+    padding: 25px;
+    background: #222;
+    color: #eee;
+    box-shadow: 0px 0px 2px gray ;
+}
+
+#logo{
+    font-family: 'Verdana', 'Arial';
+    font-size: 32px;
+    letter-spacing: 6px;
+    background: #333;
+    box-shadow: 4px 6px 6px darkred;
+    text-shadow: 2px 1px 2px floralwhite;
+    color: rgba(204, 0, 1, 255);
+    text-align: center;
+    width: 80%;
+    margin: 0px auto;
+    height: 80px;
+    margin-bottom: 27px;
+    line-height: 80px;
+    border-radius: 5px;
+}
+
+#logo:hover{
+  background: darkred;
+  color: #333;
+  box-shadow: 4px 5px 9px #333;
+  text-shadow: 2px 1px 2px floralwhite, 2px 1px 5px floralwhite, 2px 1px 8px floralwhite;
+  font-size: 36px;
+}
+
+#title{
+  margin-bottom: 20px;
+  margin-left: 235px;
+  font-size: 34px;
+  width: 57%;
+}
+
+#title:hover{
+  transition: all 3s;
+  color: #333;
+  background: darkred;
+  box-shadow: 0px 0px 5px white;
+}
+
+#menu{
+    font-family: 'Helvetica', 'Arial';
+    background: rgba(204, 0, 1, 255);
+    width: 57%;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin: 0px auto;
+}
+
+#menu ul{
+    line-height: 46px;
+    list-style: none;
+}
+
+#menu ul li{
+    height: 46px;
+    display: inline-block;
+    transition: all 300ms;
+    border-left: 2px solid black;
+    padding-left: 32px;
+    padding-right: 32px;
+} 
+
+#menu ul li:last-child{
+    width: -150px;
+} 
+
+#menu ul li:hover{
+    box-shadow: 0px 0px 12px #333 inset;
+}
+
+#menu a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#posts{
+    width: 60%;
+    float: left;
+    font-family: 'Helvetica', 'Arial';
+}
+
+.post{
+    padding: 7px;
+}
+
+.post h2{
+    font-size: 30px;
+    color: white;
+}
+
+.post .date{
+    color: gray;
+    margin-top: 5px;
+}
+
+.post p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 22px;
+    text-align: justify;
+}
+
+#lateral{
+    font-family: 'Helvetica', 'Arial';
+    width: 31%;
+    height: 250px;
+    float: right;
+    background: #333;
+    margin-right: 30px;
+    margin-top: -73px !important;
+}
+
+aside h3{
+  display: block;
+  width: auto;
+  height: 45px;
+  line-height: 45px;
+  font-size: 30px;
+  letter-spacing: 2px;
+  padding-left: 15px;
+  margin-top: -45px;
+  margin-bottom: 15px;
+}
+
+h3{
+    margin-top: -40px;
+}
+
+.whatsapp{
+    width: 60px;
+    height: 40px;
+    padding: 20px;
+    margin-top: -14px;
+}
+
+.whatsapp img{
+    width: 60px;
+}
+
+.instagram{
+    width: 60px;
+    height: 40px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.instagram img{
+    width: 60px;
+}
+
+#social .overlay{
+    display: block;
+    height: 40px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0px 0px 3px #ccc;
+    position: absolute;
+    padding: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    margin-top: -59px;
+    margin-left: 100px;
+    line-height: 40px;
+    transform: translateX(-80%);
+    opacity: 0;
+    transition: all 400ms;
+}
+
+#social div:hover .overlay{
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+#lateral{
+    box-shadow: 3px 5px 4px black;
+    font-family: 'Helvetica', 'Arial';
+    width: 31%;
+    height: 250px;
+    float: right;
+    background: #333;
+    margin-top: 375px;
+    margin-right: 30px;
+}
+
+#lateral h3{
+  margin-top: -30px;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 10px;
+  color: white;
+}
+
+.subir{
+    color: darkred !important;
+    text-decoration: none;
+    display: block;
+    float: right;
+}
+
+footer{
+    font-family: 'Helvetica', 'Arial';
+    height: 20px;
+    background: #eee;
+    margin: 0px auto;
+    width: 65%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 50px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.bx-wrapper img{
+    height: 450px !important;
+    width: 650px;
+}
+
+#slider{
+    height: 460px;
+    width: 650px;
+    margin-top: 40px;
+}
+
+
+
+/* 
+
+
+*/
+
+/* RESPONSIVE  */
+
+@media ( max-width: 1656px ){
+  #title{
+    margin-bottom: 20px;
+    margin-left: 235px;
+    font-size: 34px;
+    width: 75%;
+  }
+}
+
+@media( max-width: 1643px){
+  #menu{
+    width: 58%;
+  }
+}
+
+@media( max-width: 1614px){
+  #menu{
+    width: 59%;
+  }
+}
+
+@media( max-width: 1586px){
+  #menu{
+    width: 60%;
+  }
+}
+
+@media( max-width: 1586px){
+  #menu{
+    width: 61%;
+  }
+}
+
+@media( max-width: 1535){
+  #lateral{
+    display: block;
+    float: inline-end;
+  }
+}
+
+/* Ipad pro */
+
+@media( max-width: 1024px){
+  #title{
+    width: 93%;
+    margin-left: 24px;
+  }
+  
+  #menu{
+    width: 92%;
+  }
+  
+  #slider{
+    margin-bottom: 174px;
+  }
+  
+  .view{
+    opacity: 0;
+  }
+  
+  #posts{
+    margin-top: -121px;
+  }
+  
+  #lateral h3{
+    font-size: large;
+  }
+}
+
+
+/* Ipad */
+@media( max-width: 768px){
+    #title{
+      width: 93%;
+      font-size: x-large !important;
+      margin-left: 32px;
+    }
+
+    #menu{
+      width: 34%;
+      display: inline;
+      text-align: center;
+      background: darkred;
+      border-bottom: 2px solid darkred;
+      border-left: none;
+    }
+
+    #menu ul li{
+      border: 1px solid darkred;
+    }
+
+    #slider{
+      width: 100%;
+    }
+
+    .img{
+      width: 490px !important;
+    }
+
+    #lateral h3{
+      font-size: x-small;
+    }
+}
+
+/* Surface Duo */
+
+@media ( max-width: 540px ){
+  #logo{
+    font-size: 30px;
+    letter-spacing: 3px;
+  }
+
+  #title{
+    font-size: 18px !important;
+    margin-left: 14px;
+  }
+
+  #menu ul li {
+    width: -webkit-fill-available;
+  }
+
+  #posts{
+    width: 100%;
+    margin-bottom: 102px;
+  }
+
+  #lateral{
+    margin-right: 127px;
+    background: darkred;
+  }
+
+  #lateral h3{
+    margin-left: -9px;
+  }
+
+  .whatsapp{
+    margin-left: 6px;
+  }
+
+  .instagram{
+    margin-left: 6px;
+  }
+
+}
+
+/*  Iphone 6/ 7/ 8 plus */
+
+@media ( max-width: 414px ){
+  #logo{
+    font-size: 26px;
+    letter-spacing: 3px;
+    width: 95%;
+  }
+
+  #title{
+    width: 100%;
+    margin-left: 10px;
+    font-size: 14px !important;
+  }
+
+  #menu ul li{
+    width: 75%;
+  }
+
+  #posts{
+    width: 100%;
+    margin-top: -121px;
+    margin-bottom: 78px;
+  }
+
+  #lateral{
+    width: 36%;
+    font-size: xx-large;
+    margin-right: 85px;
+    background: darkred;
+  }
+
+  #lateral h3{
+    font-size: x-small;
+    height: 12px;
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .whatsapp{
+    margin-left: -1px;
+  }
+
+  .instagram{
+    margin-left: -1px;
+  }
+}
+
+/* Pixel 2 XL */
+
+@media ( max-width: 411px ){
+  #lateral h3{
+    margin-right: 3px;
+  }
+
+  .whatsapp{
+    margin: 0px auto;
+  }
+
+  .instagram{
+    margin: 0px auto;
+  }
+}
+
+/* Iphone 6/ 7/ 8 */
+
+@media ( max-width: 375px){
+
+  #logo {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+
+  #title{
+    font-size: 13px !important;
+  }
+
+  #menu ul li{
+    margin-right: 0px !important;
+  }
+  #lateral{
+    width: 40%;
+    font-size: xx-large;
+    margin-right: 32%;
+    background: darkred;
+  }
+}
+
+/* Moto G4 */
+
+@media ( max-width: 360px ){
+  #title {
+    font-size: 12px !important;
+  }
+}
+
+/* Iphone 5/SE */
+
+@media ( max-width: 320px) {
+  #logo {
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  #title {
+    font-size: 11px !important;
+  }
+
+  #lateral{
+    width: 36%;
+    height: 181px;
+  }
+
+  #lateral h3{
+    font-size: 9px;
+    display: table-row-group;
+  }
+
+  .whatsapp img{
+    width: 39px;
+    margin-bottom: -18px;
+  }
+
+  .instagram img{
+    width: 39px;
+    margin-top: -9px;
+  }
+
+  footer .footer{
+    font-size: small;
+  }
+}

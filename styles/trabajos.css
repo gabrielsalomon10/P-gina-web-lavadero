@@ -1,0 +1,517 @@
+.view {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: -462px;
+    perspective: 400;
+  }
+
+  .plane {
+    width: 120px;
+    height: 120px;
+    transform-style: preserve-3d;
+  }
+  .plane.main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform: rotateX(60deg) rotateZ(-30deg);
+    -webkit-animation: rotate 20s infinite linear;
+            animation: rotate 20s infinite linear;
+  }
+  .plane.main .circle {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    transform-style: preserve-3d;
+    border-radius: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 0 60px crimson, inset 0 0 60px crimson;
+  }
+  .plane.main .circle::before, .plane.main .circle::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 10%;
+    height: 10%;
+    border-radius: 100%;
+    background: crimson;
+    box-sizing: border-box;
+    box-shadow: 0 0 60px 2px crimson;
+  }
+  .plane.main .circle::before {
+    transform: translateZ(-90px);
+  }
+  .plane.main .circle::after {
+    transform: translateZ(90px);
+  }
+  .plane.main .circle:nth-child(1) {
+    transform: rotateZ(72deg) rotateX(63.435deg);
+  }
+  .plane.main .circle:nth-child(2) {
+    transform: rotateZ(144deg) rotateX(63.435deg);
+  }
+  .plane.main .circle:nth-child(3) {
+    transform: rotateZ(216deg) rotateX(63.435deg);
+  }
+  .plane.main .circle:nth-child(4) {
+    transform: rotateZ(288deg) rotateX(63.435deg);
+  }
+  .plane.main .circle:nth-child(5) {
+    transform: rotateZ(360deg) rotateX(63.435deg);
+  }
+  
+  @-webkit-keyframes rotate {
+    0% {
+      transform: rotateX(0) rotateY(0) rotateZ(0);
+      margin-top: 50px;
+    }
+    100% {
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+      margin-top: 150px;
+    }
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotateX(0) rotateY(0) rotateZ(0);
+    }
+    100% {
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+  }
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none
+}
+
+a{
+  color: white;
+}
+
+a:visited{
+  color: white;
+}
+
+.clear-fix{
+    float: none;
+    clear: both;
+}
+
+body{
+    background: url('../img/bmw.jpeg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#global{
+    width: 65%;
+    margin: 0px auto;
+    margin-top: 30px;
+    padding: 25px;
+    background: #222;
+    color: #eee;
+    box-shadow: 0px 0px 2px gray ;
+    height: 1200px;
+}
+
+#logo{
+    font-family: 'Verdana', 'Arial';
+    font-size: 32px;
+    letter-spacing: 6px;
+    background: #333;
+    box-shadow: 4px 6px 6px darkred;
+    text-shadow: 2px 1px 2px floralwhite;
+    color: rgba(204, 0, 1, 255);
+    text-align: center;
+    width: 80%;
+    margin: 0px auto;
+    height: 80px;
+    margin-bottom: 27px;
+    line-height: 80px;
+    border-radius: 5px;
+}
+
+#logo:hover{
+  background: darkred;
+  color: #333;
+  box-shadow: 4px 5px 9px #333;
+}
+
+#menu{
+    font-family: 'Helvetica', 'Arial';
+    background: rgba(204, 0, 1, 255);
+    width: 57%;
+    text-transform: uppercase;
+    margin: 0px auto;
+    margin-bottom: 20px;
+}
+
+#menu ul{
+    line-height: 46px;
+    list-style: none;
+}
+
+#menu ul li{
+    height: 46px;
+    display: inline-block;
+    transition: all 300ms;
+    border-left: 2px solid black;
+    padding-left: 32px;
+    padding-right: 32px;
+} 
+
+#menu ul li:last-child{
+    width: -150px;
+} 
+
+#menu ul li:hover{
+    box-shadow: 0px 0px 12px #333 inset;
+}
+
+#menu a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#posts{
+    width: 60%;
+    float: left;
+    font-family: 'Helvetica', 'Arial';
+}
+
+.post{
+    padding: 7px;
+}
+
+.post h2{
+    font-size: 30px;
+    color: white;
+}
+
+.post .date{
+    color: gray;
+    margin-top: 5px;
+}
+
+.post p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 22px;
+    text-align: justify;
+}
+
+#lateral{
+    font-family: 'Helvetica', 'Arial';
+    width: 31%;
+    height: 250px;
+    float: right;
+    background: #333;
+    margin-right: 30px;
+    margin-top: -73px !important;
+}
+
+aside h3{
+  display: block;
+  width: auto;
+  height: 45px;
+  line-height: 45px;
+  font-size: 30px;
+  letter-spacing: 2px;
+  padding-left: 15px;
+  margin-top: -45px;
+  margin-bottom: 15px;
+}
+
+h3{
+    margin-top: -40px;
+}
+
+.whatsapp{
+    width: 60px;
+    height: 40px;
+    padding: 20px;
+    margin-top: -14px;
+}
+
+.whatsapp img{
+    width: 60px;
+}
+
+.instagram{
+    width: 60px;
+    height: 40px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.instagram img{
+    width: 60px;
+}
+
+#social .overlay{
+    display: block;
+    height: 40px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0px 0px 3px #ccc;
+    position: absolute;
+    padding: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    margin-top: -59px;
+    margin-left: 100px;
+    line-height: 40px;
+    transform: translateX(-80%);
+    opacity: 0;
+    transition: all 400ms;
+}
+
+#social div:hover .overlay{
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+#lateral{
+    box-shadow: 3px 5px 4px black;
+    font-family: 'Helvetica', 'Arial';
+    width: 31%;
+    height: 250px;
+    float: right;
+    background: #333;
+    margin-top: 375px;
+    margin-right: 30px;
+}
+
+#lateral h3{
+  margin-top: -30px;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 10px;
+  color: white;
+}
+
+
+.subir{
+    color: darkred !important;
+    text-decoration: none;
+    display: block;
+    float: right;
+}
+
+footer{
+    font-family: 'Helvetica', 'Arial';
+    height: 20px;
+    background: #eee;
+    margin: 0px auto;
+    width: 65%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 50px;
+    line-height: 20px;
+    text-align: center;
+}
+
+#slider{
+    height: 510px;
+    width: 810px !important;
+    margin: 0px auto;
+}
+
+.bx-wrapper img{
+    height: 600px !important;
+    width: 800px;
+}
+
+.bx-wrapper .bx-viewport{
+    width: 800px;
+    height: 500px;
+}
+
+.fija{
+  position: fixed;
+  top: 50%;
+  right: 303px;
+  width: 60px;
+  height: 50px;
+  box-shadow: 0px 0px 16px;
+  border-radius: 30px;
+}
+
+.fija-text{
+  display: block;
+  height: 53px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: 2px solid white;
+  box-shadow: 0px 0px 4px #333;
+  background: #f4f7fe;
+  position: absolute;
+  color: #333;
+  padding: 5px;
+  margin-left: 82px;
+  margin-top: -66px;
+  transform: translateX(-80%);
+  opacity: 0;
+  transition: all 400ms;
+}
+
+.fija a:hover .fija-text{
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.fija img{
+  width: 60px;
+}
+
+/* 
+
+
+
+
+
+*/
+
+/* RESPONSIVE */
+@media ( max-width: 1024px ){
+  #title{
+    width: 93%;
+    margin-left: 24px;
+  }
+  
+  #menu{
+    width: 92%;
+  }
+
+  #slider {
+    height: 510px;
+    width: 90% !important;
+    margin: 0px auto;
+  }
+}
+
+/* Ipad */
+@media ( max-width: 768px ){
+
+  #menu{
+    width: 34%;
+    display: inline;
+    text-align: center;
+    background: darkred;
+    border-bottom: 2px solid darkred;
+    border-left: none;
+  }
+  #menu ul li{
+    border: 1px solid darkred;
+  }
+
+  .map iframe{
+    width: 171%;
+  }
+
+  .fija{
+    position: absolute;
+    top: 95%;
+    right: 178px;
+  }
+}
+
+/* Surface Duo */
+@media ( max-width: 540px ){
+  #logo{
+    font-size: 29px;
+    letter-spacing: 3px;
+  }
+
+  header{
+    margin-bottom: 20px;
+  }
+
+  #menu ul li{
+    width: -webkit-fill-available;
+  }
+
+  #posts{
+    width: 100%;
+  }
+}
+
+
+/* Iphone 6/ 7/ 8 Plus*/
+
+@media ( max-width: 414px ){
+  #logo {
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  #menu ul li {
+    width: 75%;
+  }
+
+  .post h2 {
+    font-size: 14px;
+    color: white;
+  }
+
+  .post p{
+    text-align: initial;
+  }
+
+  .fija{
+    opacity: 0;
+  }
+}
+
+
+/* Iphone 6/ 7/ 8 */
+@media ( max-width: 375px ){
+  #logo {
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+}
+
+
+/* Iphone 5/ SE */
+#logo {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+#slider{
+  width: 100px;
+}
+
+.post{
+  margin-top: -14px;
+}
+
+.post h2{
+  font-size: 11px;
+}
+
+.post p {
+  margin-top: 10px;
+}
+
+footer .footer{
+  font-size: small;
+}
